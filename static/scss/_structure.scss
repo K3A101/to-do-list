@@ -168,7 +168,8 @@ footer#bottom>*,
         background: var(--primary-alt-2);
         border-radius: 3rem;
         margin: .4rem;
-        width: 50%;
+        width: 0%;
+        transition: width var(--duration) var(--ease);
       }
     }
   }
@@ -209,8 +210,10 @@ footer#bottom>*,
         &::before {
           content: '';
           position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           left: 0;
-          top: 0.3rem;
           width: 2rem;
           height: 2rem;
           background: url(../images/leaf.svg);
@@ -228,7 +231,9 @@ footer#bottom>*,
 
   .finish {
     grid-row: 4;
-    place-self: center;
+      place-self: end;
+      grid-column: 2;
+      
     .finish-button {
       text-transform: uppercase;
       appearance: none;
