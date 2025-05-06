@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/site.webmanifest">
+    <title><%= title || 'Default Title' %></title>
+    <% if (stylesheets) { %>
+        <% stylesheets.forEach(function (stylesheet) { %>
+            <link rel="stylesheet" href="<%= stylesheet %>">
+        <% }); %>
+    <% } %>
+</head>
+<body>
+<header id="top">
+    <!-- Optional global navigation -->
+    <%- include('./partials/header.ejs')%>
+</header>
+
+<main id="main">
+    <div class="layout-grid">
+        <% if (content) { %>
+        <%- include(content) %>
+        <% } else { %>
+            <p>No content available.</p>
+        <% } %>
+    </div>
+
+</main>
+
+<footer id="bottom">
+    <div class="full-width">
+        <%- include('./partials/footer.ejs') %>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; <%= new Date().getFullYear() %> Todo List dashboard.</p>
+    </div>
+</footer>
+
+<% if (scripts) { %>
+    <% scripts.forEach(function (script) { %>
+        <script src="<%= script %>"></script>
+    <% }); %>
+<% } %>
+<!-- <script src="/js/index.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/socket.js"></script> -->
+</body>
+</html>

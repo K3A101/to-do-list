@@ -1,78 +1,47 @@
-<!doctype html>
-<html lang="en">
+<a href="/" class="back-button">Bai bek!</a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="/site.webmanifest">
-    <title><%= title  %></title>
-</head>
-
-<body>
-    <main>
-        <div class="layout-grid">
-            <div class="dashboard">
-                <div class="content-block">
-                    <section class="date">
-                        <div class="day">Thursday</div>
-                        <div class="date-number">
-                        </div>
-                        <div class="month">May</div>
-                    </section>
-                    <section class="progression">
-                        <h2>Progréso</h2>
-                        <div class="progress-outer">
-                            <div class="progress-bar"></div>
-                        </div>
-                    </section>
-                    <form class="task-form" action="">
-                        <label for="task_input">Insert your task:</label>
-                        <div class="input-container">
-                            <input id="task_input" value="" type="text" name="task_input"
-                                placeholder="Write your task here.." autocomplete="off">
-                            <button class="add-task-button">
-                                <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" color="#000000">
-                                    <path d="M6 12H12M18 12H12M12 12V6M12 12V18" stroke="#fff" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                            </button>
-                        </div>
-
-                    </form>
-
-                    <div class="task-list-container">
-                        <h3>Tasks:</h3>
-                        <ul class="tasks-list"></ul>
-
-
-                    </div>
-
-
-                    <div class="finish">
-                        <button type="button" class="finish-button">
-                            Finish Day
-                        </button>
-                    </div>
+    <div class="dashboard">
+        <h1 class="displayed-name"></h1>
+        <div class="content-block">
+            <section class="date">
+                <div class="day">Thursday</div>
+                <div class="date-number">
                 </div>
+                <div class="month">May</div>
+            </section>
+            <section class="progression">
+                <h2>Progréso</h2>
+                <div class="progress-outer">
+                    <div class="progress-bar"></div>
+                </div>
+            </section>
+            <form class="task-form" action="">
+                <label for="task_input">Insert your task:</label>
+                <div class="input-container">
+                    <input id="task_input" value="" type="text" name="task_input" placeholder="Write your task here.."
+                        autocomplete="off">
+                    <button class="add-task-button">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" color="#000000">
+                            <path d="M6 12H12M18 12H12M12 12V6M12 12V18" stroke="#fff" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="task-list-container">
+                <h3>Tasks:</h3>
+                <ul class="tasks-list"></ul>
+
+            </div>
+
+
+            <div class="finish">
+                <button type="button" class="finish-button">
+                    Finish Day
+                </button>
             </div>
         </div>
-
-
-    </main>
-
-
-    <script src="/js/index.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/socket.js"></script>
-
-</body>
-
-</html>
+    </div>
