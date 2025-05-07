@@ -1,47 +1,47 @@
 <a href="/" class="back-button">Bai bek!</a>
 
-    <div class="dashboard">
-        <h1 class="displayed-name"></h1>
-        <div class="content-block">
-            <section class="date">
-                <div class="day">Thursday</div>
-                <div class="date-number">
-                </div>
-                <div class="month">May</div>
-            </section>
-            <section class="progression">
-                <h2>Progréso</h2>
-                <div class="progress-outer">
-                    <div class="progress-bar"></div>
-                </div>
-            </section>
-            <form class="task-form" action="">
-                <label for="task_input">Insert your task:</label>
-                <div class="input-container">
-                    <input id="task_input" value="" type="text" name="task_input" placeholder="Write your task here.."
-                        autocomplete="off">
-                    <button class="add-task-button">
-                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg" color="#000000">
-                            <path d="M6 12H12M18 12H12M12 12V6M12 12V18" stroke="#fff" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                        </svg>
-                    </button>
-                </div>
-
-            </form>
-
-            <div class="task-list-container">
-                <h3>Tasks:</h3>
-                <ul class="tasks-list"></ul>
-
+<div class="dashboard">
+    <h1 class="displayed-name"></h1>
+    <div class="content-block">
+        <section class="date">
+            <div class="day">Thursday</div>
+            <div class="date-number">
             </div>
+            <div class="month">May</div>
+        </section>
+        <section class="progression">
+            <h2>Progréso</h2>
+            <div class="progress-outer">
+                <div class="progress-bar"></div>
+            </div>
+        </section>
+        <form class="task-form" action="">
+            <label for="task_input">Insert your task:</label>
+            <div class="input-container">
+                <input id="task_input" value="" type="text" name="task_input" placeholder="Write your task here.."
+                    autocomplete="off">
+                <button class="add-task-button">
+    
+                <%- include('./partials/svg.ejs', { attr_width: '24', attr_height: '24', id: 'plus' , ariaLabel:'Buta kos pa hasi' ,
+                    theme: { version: '1.0.0' }})// Make sure theme.version is passed if used }) %>
 
 
-            <div class="finish">
-                <button type="button" class="finish-button">
-                    Finish Day
                 </button>
             </div>
+
+        </form>
+
+        <div class="task-list-container">
+            <h3>Tasks:</h3>
+            <ul class="tasks-list"></ul>
+
+        </div>
+
+
+        <div class="finish">
+            <button type="button" class="finish-button">
+                Finish Day
+            </button>
         </div>
     </div>
+</div>

@@ -22,7 +22,7 @@ let appRoutes = require('./routes/routes');
 app.use('/', appRoutes);
 
 io.on('connection', (socket) => {
-    console.log('A user connected');
+
 
     socket.emit('initialTasks', tasks);
 
@@ -43,6 +43,21 @@ io.on('connection', (socket) => {
         tasks = [];
         io.emit('tasks', tasks);
     });
+
+    socket.on('new-user', (insertedName) => {
+        console.log(`${insertedName} has joined the chat`);
+
+        //Save the username as key to access the user's socket id
+        socket['insertedName'] = insertedName;
+        io.emit('new-user', insertedName);
+    })
+
+    socket.on('user joined', (insertedName) => {
+        console.log(`${insertedName} has joined the chat`);
+        //Save the username as key to access the user's socket id
+        socket['insertedName'] = insertedName;
+        io.emit('user joined', insertedName);
+    })
 
     
     socket.on('disconnect', () => {

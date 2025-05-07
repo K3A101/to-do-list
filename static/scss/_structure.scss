@@ -87,9 +87,24 @@ footer#bottom>*,
     grid-column: auto;
   }
 }
+
+.back-button {
+  display: block;
+
+  &.hide-back-btn {
+    display: none;
+  }
+}
+
 .dashboard {
   padding: 5rem;
+  display: block;
+
+  &.hidden {
+    display: none;
+  }
 }
+
 .content-block {
   display: grid;
   grid-template-columns: 1fr;
@@ -184,7 +199,7 @@ footer#bottom>*,
     height: 30rem;
     overflow: hidden;
     grid-column: 1/4;
-      grid-row: 3/-4;
+    grid-row: 3/-4;
 
 
     .tasks-list {
@@ -198,15 +213,15 @@ footer#bottom>*,
       list-style: none;
 
 
-    li {
+      li {
         position: relative;
         padding-left: 3rem;
         display: inline-flex;
         flex-direction: row;
         align-items: center;
-        word-wrap: break-word; 
-        padding-block: 1rem; 
-    
+        word-wrap: break-word;
+        padding-block: 1rem;
+
         &::before {
           content: '';
           position: absolute;
@@ -231,9 +246,9 @@ footer#bottom>*,
 
   .finish {
     grid-row: 4;
-      place-self: end;
-      grid-column: 2;
-      
+    place-self: end;
+    grid-column: 2;
+
     .finish-button {
       text-transform: uppercase;
       appearance: none;
@@ -246,11 +261,25 @@ footer#bottom>*,
       font-family: 'Minecraft Regular', sans-serif;
       font-size: 2rem;
       cursor: pointer;
-      
+
     }
   }
 }
 
+.layout-grid:has(.create-profile) {
+  overflow: hidden;
+
+  @include respond-to(from-md) {
+      height: 50vw;
+  }
+}
+
+.create-profile {
+  justify-self: center;
+  align-items: center;
+  place-self: center;
+
+}
 
 
 

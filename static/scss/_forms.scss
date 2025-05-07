@@ -7,6 +7,7 @@ input[type="tel"] {
     border-radius: 3rem;
     border: 0;
     padding: 1.6rem 3rem;
+    outline-color: var(--primary);
     background: var(--background-light);
 
     &::placeholder {
@@ -19,7 +20,7 @@ form {
         width: 100%;
         height: fit-content;
         grid-column: 3/4;
-            grid-row: 2/3;
+        grid-row: 2/3;
 
         label {
             display: inline-block;
@@ -45,14 +46,69 @@ form {
                 border: 0;
                 background: var(--background-dark);
                 border-radius: 2rem;
-                padding:1.5rem;
+                padding: 1.5rem;
                 transition: all var(--ease) var(--duration);
                 cursor: pointer;
 
-                &:hover, &:focus {
-                 background: var(--background-dark-hover);
+                &:hover,
+                &:focus {
+                    background: var(--background-dark-hover);
                 }
             }
         }
+    }
+
+    &.profile-form {
+        background: var(--background-light);
+        display: flex;
+        flex-direction: column;
+        height: 34rem;
+        width: fit-content;
+        padding: 4rem;
+        border-radius: 2rem;
+        box-shadow: var(--box-shadow);
+        border: .2rem solid var(--border);
+
+        @include respond-to(from-md) {
+            width: 100%;
+        }
+
+        .fields {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                line-height: 2;
+            }
+
+            input[type="text"] {
+                border: .2rem solid var(--border);
+                outline-color: var(--primary);
+            }
+        }
+
+        button[type="submit"] {
+            appearance: none;
+            -webkit-appearance: none;
+            background: var(--background-dark);
+            padding: 1.6rem 4rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: all var(--ease) var(--duration);
+            border: 0;
+            margin-top: auto;
+
+            span {
+                font-family: var(--font-stack);
+                color: var(--text-light);
+                font-size: 2rem;
+            }
+
+            &:hover,
+            &:focus {
+                background: var(--background-dark-hover);
+            }
+        }
+
     }
 }

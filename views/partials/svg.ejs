@@ -1,0 +1,6 @@
+<% const _filename=typeof filename !=='undefined' ? filename : 'general.svg' ; const _ariaLabel=typeof ariaLabel
+    !=='undefined' ? ariaLabel : id.replace(/-/g, ' ' ); %>
+    <svg xmlns="http://www.w3.org/2000/svg" width="<%= attr_width %>" height="<%= attr_height %>"
+        aria-label="<%= _ariaLabel %>" class="svg-<%= id %>">
+        <use href="/svg/<%= _filename %>?v=<%= theme.version %>#<%= id %>" />
+    </svg>
