@@ -5,11 +5,14 @@
             <path d="M15.28,13.81l-3.59-3.59c-.13-.13-.3-.19-.47-.21.79-1.05,1.27-2.35,1.27-3.76,0-3.45-2.8-6.25-6.25-6.25S0,2.8,0,6.25s2.8,6.25,6.25,6.25c1.61,0,3.08-.62,4.19-1.62.03.15.08.29.2.4l3.59,3.59c.15.15.34.22.53.22s.38-.07.53-.22c.29-.29.29-.77,0-1.06ZM6.25,11c-2.62,0-4.75-2.13-4.75-4.75S3.63,1.5,6.25,1.5s4.75,2.13,4.75,4.75-2.13,4.75-4.75,4.75Z"/>
         </symbol>
         <symbol viewBox="0 0 24 24" id="plus">
-            <path d="M6 12H12M18 12H12M12 12V6M12 12V18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M6 12H12M18 12H12M12 12V6M12 12V18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         </symbol> 
 
         <symbol viewBox="0 0 24 12" id="arrow">
             <path d="M23.5303 6.53033C23.8232 6.23744 23.8232 5.76256 23.5303 5.46967L18.7574 0.696699C18.4645 0.403806 17.9896 0.403806 17.6967 0.696699C17.4038 0.989593 17.4038 1.46447 17.6967 1.75736L21.9393 6L17.6967 10.2426C17.4038 10.5355 17.4038 11.0104 17.6967 11.3033C17.9896 11.5962 18.4645 11.5962 18.7574 11.3033L23.5303 6.53033ZM0 6.75L23 6.75V5.25L0 5.25L0 6.75Z"/>
+        </symbol>
+        <symbol viewBox="0 0 24 24" id="arrow-left">
+          <path d="M21 12L3 12M3 12L11.5 3.5M3 12L11.5 20.5" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         </symbol>
 
         <symbol viewBox="0 0 7 12" id="chevron">

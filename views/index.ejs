@@ -1,4 +1,10 @@
-<a href="/" class="back-button">Bai bek!</a>
+<a href="/" class="back-button">
+   <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+        xmlns="http://www.w3.org/2000/svg" color="#000000">
+        <path d="M21 12L3 12M3 12L11.5 3.5M3 12L11.5 20.5" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+    </svg>
+</a>
 
 <div class="dashboard">
     <h1 class="displayed-name"></h1>
@@ -16,14 +22,14 @@
             </div>
         </section>
         <form class="task-form" action="">
-            <label for="task_input">Insert your task:</label>
+            <label for="task_input">Pone bo tarea:</label>
             <div class="input-container">
-                <input id="task_input" value="" type="text" name="task_input" placeholder="Write your task here.."
+                <input id="task_input" value="" type="text" name="task_input" placeholder="Skibi un tarea akí.."
                     autocomplete="off">
                 <button class="add-task-button">
     
                 <%- include('./partials/svg.ejs', { attr_width: '24', attr_height: '24', id: 'plus' , ariaLabel:'Buta kos pa hasi' ,
-                    theme: { version: '1.0.0' }})// Make sure theme.version is passed if used }) %>
+                    theme: { version: '1.0.0' }}) %>
 
 
                 </button>

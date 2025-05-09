@@ -88,17 +88,17 @@ footer#bottom>*,
   }
 }
 
-.back-button {
-  display: block;
-
-  &.hide-back-btn {
-    display: none;
-  }
+.displayed-name:not(:empty) {
+  color: var(--background-light);
 }
 
+
 .dashboard {
-  padding: 5rem;
   display: block;
+
+  @include respond-to(from-md) {
+  padding: 5rem;
+  }
 
   &.hidden {
     display: none;
@@ -238,6 +238,10 @@ footer#bottom>*,
 
         &:not(:last-child) {
           border-bottom: .1rem solid var(--border);
+        }
+        &:has(input[type="checkbox"]:checked) {
+          text-decoration: line-through;
+
         }
       }
 

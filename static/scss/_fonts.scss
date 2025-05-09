@@ -32,3 +32,12 @@ url('../fonts/minecraft/Minecraft-Regular.woff') format('woff');
   font-weight: 400;
   src: url('../fonts/minecraft/Minecraft-Italic.woff2') format('woff2'),
   url('../fonts/minecraft/Minecraft-Italic.woff') format('woff');}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Minecraft Heading';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/minecraft/MinecraftTen.woff2') format('woff2'),
+  url('../fonts/minecraft/MinecraftTen.woff') format('woff');}
+
