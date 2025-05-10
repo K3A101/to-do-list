@@ -1,11 +1,16 @@
 @use 'helpers/mixins' as *;
 
-h1 , h3{
+h1 {
     font-family: var(--font-heading);
 }
 
 h1 {
     font-size: 6rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 0;
 }
 
 

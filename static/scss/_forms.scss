@@ -15,6 +15,16 @@ input[type="tel"] {
     }
 }
 
+input[type="checkbox"] {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
 form {
     &.task-form {
         width: 100%;
@@ -41,7 +51,6 @@ form {
             .add-task-button {
                 appearance: none;
                 display: inline-flex;
-                flex-direction: center;
                 align-items: center;
                 border: 0;
                 background: var(--background-dark);
